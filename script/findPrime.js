@@ -8,18 +8,21 @@ let array = [];
 let count = 1;
 let total = 0;
 
-for (var q = minNum; q < maxNum; q++) {
-  count += 2;
+if (minNum || maxNum) {
+  for (var q = minNum; q < maxNum; q++) {
+    count += 2;
 
-  if (isPrime(q)) {
-    array.push(q);
-    total++;
+    if (isPrime(q)) {
+      array.push(q);
+      total++;
+    }
   }
+  $(".content").prepend(
+    `<h2>Highest Prime Calculated: ${array[array.length - 1]}</h2>
+    <h2>Total Primes Calculated: ${total}</h2>`
+  );
+  $("#outPrime").val(array);
 }
-
-$("#thePrime").text(`Highest Prime Calculated: ${array[array.length - 1]}`);
-$("#countPrime").text(`Total Primes Calculated: ${total}`);
-$("#outPrime").val(array);
 
 function isPrime(num) {
   if (num <= 3) return num > 1;

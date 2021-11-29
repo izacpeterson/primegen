@@ -4,12 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <script defer src="./app.js"></script>
     <title>Prime Gen</title>
   </head>
   <body>
-    <input type="number" id="max" />
-    <button id="calculate">Calc</button>
-    <textarea id="output"></textarea>
+    <header>
+      <h1>Prime Generator</h1>
+    </header>
+    <main>
+      <div class="input">
+        <label for="max">Max Value:</label>
+        <input type="number" id="max" />
+        <button type="submit" id="calculate">Calc</button>
+      </div>
+      <!-- <textarea id="output"></textarea> -->
+      <ul id="output"></ul>
+    </main>
   </body>
 </html>

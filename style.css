@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+html,
+body {
+  height: 100%;
+  /* background-color: cornflowerblue; */
+}
+header {
+  background-color: cornflowerblue;
+  color: white;
+}
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.input {
+  display: flex;
+  padding: 20px;
+}
+.input * {
+  font-size: 30px;
+  padding: 5px;
+  border: none;
+}
+input {
+  background-color: #d8d8d8;
+}
+button {
+  background-color: cornflowerblue;
+  color: white;
+}
+ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+li {
+  padding: 10px;
+  list-style: none;
+}

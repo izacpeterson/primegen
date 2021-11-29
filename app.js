@@ -1,5 +1,3 @@
-let primeList = [];
-
 function isPrime(num) {
   if (num <= 3) return num > 1;
   if (num % 2 === 0 || num % 3 === 0) return false;
@@ -12,12 +10,15 @@ function isPrime(num) {
 }
 
 document.querySelector("#calculate").addEventListener("click", () => {
+  primeList = [];
   let maxValue = document.querySelector("#max").value;
   console.log(maxValue);
 
   for (let i = 0; i < maxValue; i++) {
-    if (isPrime(i)) primeList.push(i);
+    if (isPrime(i)) {
+      primeList.push(i);
+      document.querySelector("#output").innerHTML += `<li>${i}</li>`;
+    }
   }
-
-  document.querySelector("#output").value = primeList;
+  //   document.querySelector("#output").value = primeList;
 });

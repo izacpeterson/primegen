@@ -1,39 +1,25 @@
-<!-- @format -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <link rel="stylesheet" href="./style/style.css" />
-    <title>PrimeGen</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./app.js"></script>
+    <title>Prime Gen</title>
   </head>
   <body>
     <header>
-      <h1>Prime Number Generator</h1>
-      <nav>
-        <a href="">Prime Generator</a>
-        <a href="./pages/checker.html">Prime Checker</a>
-        <a href="./pages/about.html">About </a>
-      </nav>
+      <h1>Prime Generator</h1>
     </header>
-    <div class="content">
-      <form action="">
-        <h3>Calculate Primes between</h3>
-        <input type="text" name="min" />
-        <h3>and</h3>
-        <input type="text" name="max" />
-
-        <input type="submit" />
-      </form>
-
-      <textarea name="outPrime" id="outPrime"></textarea>
-      <button id="btnSave">Save</button>
-    </div>
+    <main>
+      <div class="input">
+        <label for="max">Max Value:</label>
+        <input type="number" id="max" />
+        <button type="submit" id="calculate">Calc</button>
+      </div>
+      <!-- <textarea id="output"></textarea> -->
+      <ul id="output"></ul>
+    </main>
   </body>
-  <script src="./script/findPrime.js"></script>
 </html>
